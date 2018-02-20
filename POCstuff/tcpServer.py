@@ -12,12 +12,11 @@ def Main():
     print("Ready to recieve messages!!")
 
     # establish the connection
-    #c, addr = s.accept()
-    #print("Connection from : " + str(addr) + "\n")
+    c, addr = s.accept()
+    print("Connection from : " + str(addr) + "\n")
 
 
     while True:
-        c, addr = s.accept()
         data = c.recv(1024).decode('utf-8')
         if not data:
             break

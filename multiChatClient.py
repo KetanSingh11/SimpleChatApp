@@ -33,6 +33,10 @@ def smiley_button_tieup(event=None):
     my_msg.set(":)")    # A common smiley character
     send()
 
+def sad_button_tieup(event=None):
+    """ Function for smiley button action """
+    my_msg.set(":(")    # A common smiley character
+    send()
 
 
 top = tkinter.Tk()
@@ -51,13 +55,15 @@ messages_frame.pack()
 
 button_label = tkinter.Label(top, text="Enter Message:")
 button_label.pack()
-entry_field = tkinter.Entry(top, textvariable=my_msg)
+entry_field = tkinter.Entry(top, textvariable=my_msg, foreground="Red")
 entry_field.bind("<Return>", send)
 entry_field.pack()
 send_button = tkinter.Button(top, text="Send", command=send)
 send_button.pack()
 smiley_button = tkinter.Button(top, text=":)", command=smiley_button_tieup)
 smiley_button.pack()
+sad_button = tkinter.Button(top, text=":(", command=sad_button_tieup)
+sad_button.pack()
 
 quit_button = tkinter.Button(top, text="Quit", command=on_closing)
 quit_button.pack()
