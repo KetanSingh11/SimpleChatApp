@@ -3,7 +3,7 @@
 
 My attempt to explore multi-treading and Socket module by creating a simple
 chat application with a single server in the centre of multiple clients. Clients
-post messages on the GUI ()created using simple Tkinter package). Messages posted
+post messages on the GUI (created using simple Tkinter package). Messages posted
 by each client is shows to every other client connected to the server.
 Basically a chatroom system where every message is shows to everyone.
 
@@ -27,5 +27,6 @@ Execute the below from Windows command prompt/Linux Shell[**](#footnote)
  * Threading (inbuild in Python Standard Library)
  * Sockets (inbuild in Python Standard Library)
 
-
+<a name="footnote">
 > **Build and Tested on __WINDOWS 7__. Hopefully should work on Linux also.
+</a>
